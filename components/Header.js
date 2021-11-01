@@ -13,7 +13,7 @@ import{ HomeIcon} from "@heroicons/react/solid";
 
 function Header() {
     return (
-        <div>
+        <div className='shadow-sm border-b bg-white sticky top-0 z-50'>
             <div className="flex justify-between max-w-6xl mx-5 l:mx-auto">
                 {/*left*/}
                 <div className="relative hidden lg:inline-grid w-24 cursor-pointer">
@@ -46,15 +46,30 @@ function Header() {
                             rounded-md'
                             type="text" 
                             placeholder="Search"/>
-
                     </div>
                 </div>
 
 
                 {/*right*/}
                 <div className='flex items-center justify-end space-x-4'>
-                <HomeIcon className='h-10 w-10' />
-                <MenuIcon className='h-6 w-10 md:hidden cursor-pointer'/>
+                    <HomeIcon className='navBtn' />
+                    <MenuIcon className='h-6 md:hidden cursor-pointer'/>
+                    <div className='relative  navBtn'>
+                        <PaperAirplaneIcon className='navBtn rotate-45'/>
+                        <div className='absolute -top-1 -right-2 text-xs w-5 h-5
+                        bg-red-500 rounded-full flex items-center justify-center
+                        animate-pulse text-white'>
+                            3
+                        </div>
+                    </div>
+                    <PlusCircleIcon className='navBtn'/>
+                    <UserGroupIcon className='navBtn'/>
+                    <HeartIcon className='navBtn'/>
+                    <img 
+                        src='https://avatars.githubusercontent.com/u/13840191?v=4' 
+                        alt='profile picture'
+                        className='h-10 rounded-full cursor-pointer'
+                    />
                 </div>
                 
             </div>
